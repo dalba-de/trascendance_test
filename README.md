@@ -1,27 +1,7 @@
-# Frontend
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* [FullStack app with nest and angular](https://buddy.works/tutorials/build-a-full-stack-web-application-with-angular-7-and-nest-js)
+* [Developing app backend with nestjs](https://auth0.com/blog/full-stack-typescript-apps-part-1-developing-backend-apis-with-nestjs/)
+* [Postgres CRUD rest api example](https://blog.logrocket.com/nodejs-expressjs-postgresql-crud-rest-api-example/)
+* [Auth in Nest](https://medium.com/@nielsmeima/auth-in-nest-js-and-angular-463525b6e071)
+* [Angular, rest and jwt](https://dev.to/thisdotmedia/angular-and-the-rest-nest-js-and-jwt-dja)
+* [Third Party authentication](https://www.nerd.vision/post/nestjs-third-party-oauth2-authentication)
+* [Implement auth2 with google app](https://dev.to/imichaelowolabi/how-to-implement-login-with-google-in-nest-js-2aoa)
