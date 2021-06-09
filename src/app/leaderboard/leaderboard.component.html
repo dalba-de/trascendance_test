@@ -1,0 +1,15 @@
+<h1 style="text-align:center">Global Leaderboards</h1>
+<table style="width:400px" class="center">
+	<thead>
+		<tr>
+			<th style="text-align:center">Player</th>
+			<th style="text-align:center">Trophies</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let contact of contacts">
+			<td style="text-align:center">{{contact.name}}</td>
+			<td style="text-align:center">{{contact.trophies}}</td>
+		</tr>
+	</tbody>
+</table>

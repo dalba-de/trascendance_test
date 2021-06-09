@@ -1,0 +1,17 @@
+table, th, td, tr, tbody, thead {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+td {
+	background-color:lightgray;
+}
+
+th {
+	background-color: lightseagreen;
+}
+
+table.center {
+	margin-left: auto; 
+	margin-right: auto;
+}
