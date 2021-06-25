@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { Contact } from "./contact";
+import { User } from "./user";
 
 @Injectable({
   providedIn: 'root'
@@ -11,23 +11,19 @@ export class ApiService {
 
   API_SERVER = "http://localhost:3000";
 
-  public readContacts(){
-	  return this.httpClient.get<Contact[]>(`${this.API_SERVER}/contacts`);
+  public getUsers(){
+      return this.httpClient.get<User[]>(`${this.API_SERVER}/users`)
   }
 
-  public getLeaderboard(){
-	  return this.httpClient.get<Contact[]>(`${this.API_SERVER}/contacts/leaderboard`)
+  public createUser(user: User) {
+	  return this.httpClient.post<User>(`${this.API_SERVER}/users/create`, User);
   }
 
-  public createContact(contact: Contact) {
-	  return this.httpClient.post<Contact>(`${this.API_SERVER}/contacts/create`, contact);
+  public updateUser(user: User) {
+	  return this.httpClient.put<User>(`${this.API_SERVER}/users/${user.id}/update`, User);
   }
 
-  public updateContact(contact: Contact) {
-	  return this.httpClient.put<Contact>(`${this.API_SERVER}/contacts/${contact.id}/update`, contact);
-  }
-
-  public deleteContact(id: number) {
-	  return this.httpClient.delete(`${this.API_SERVER}/contacts/${id}/delete`)
+  public deleteUser(id: number) {
+	  return this.httpClient.delete(`${this.API_SERVER}/users/${id}/delete`)
   }
 }

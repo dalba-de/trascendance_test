@@ -1,6 +1,6 @@
 import { RouterModule, Routes } from '@angular/router';
 
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { MatInputModule } from '@angular/material/input'
@@ -15,9 +15,13 @@ import { MenuComponent } from './menu/menu.component';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 import { ContactComponent } from './contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
+import { CallbackComponent } from './callback/callback.component';
 
 const routes: Routes = [
-	{ path: '', redirectTo: 'initial', pathMatch: 'full' },
+	{ path: '', redirectTo: 'login', pathMatch: 'full' },
+    { path: 'callback', component: CallbackComponent },
+    { path: 'login', component: LoginComponent },
 	{ path: 'leaderboard', component: LeaderboardComponent },
 	{ path: 'contacts', component: ContactComponent },
 	{ path: '**', redirectTo: '/', pathMatch: 'full' }
@@ -28,7 +32,9 @@ const routes: Routes = [
     EncabezadoComponent,
     MenuComponent,
     LeaderboardComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(routes), HttpClientModule, BrowserAnimationsModule,
