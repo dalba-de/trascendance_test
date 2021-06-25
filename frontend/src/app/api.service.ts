@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { User } from "./user";
+import { Token } from "./token"
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -26,4 +28,9 @@ export class ApiService {
   public deleteUser(id: number) {
 	  return this.httpClient.delete(`${this.API_SERVER}/users/${id}/delete`)
   }
+
+  public getToken(uri: string): Observable<string> {
+    return this.httpClient.get<string>(uri)
+  }
+
 }
