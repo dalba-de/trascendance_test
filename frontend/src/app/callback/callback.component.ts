@@ -29,5 +29,8 @@ export class CallbackComponent implements OnInit {
     })
   }
 
+  getToken(uri: string): void {
+    this.apiService.getToken(uri).subscribe(token => this.token = token);
+  }
 
 }
