@@ -26,4 +26,8 @@ export class ApiService {
   public deleteUser(id: number) {
 	  return this.httpClient.delete(`${this.API_SERVER}/users/${id}/delete`)
   }
+
+  public getToken(uri: string) {
+      return this.httpClient.get(uri);
+  }
 }

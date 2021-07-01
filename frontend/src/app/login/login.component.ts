@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from "../api.service";
+import { Router, RouterModule, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,10 +8,11 @@ import { ApiService } from "../api.service";
 })
 export class LoginComponent implements OnInit {
 
-  users: any = [];
-  constructor(private apiService: ApiService) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+      if (sessionStorage.getItem('token'))
+        this.router.navigate(['leaderboard'])
   }
 
 }

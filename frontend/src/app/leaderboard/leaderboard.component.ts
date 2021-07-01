@@ -12,5 +12,9 @@ export class LeaderboardComponent implements OnInit {
   	constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.apiService.getUsers().subscribe((result)=>{
+        this.contacts = result;
+        console.log(this.contacts);
+    })
   }
 }
